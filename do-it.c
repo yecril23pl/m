@@ -9,7 +9,7 @@ div_t const q = div (np, d);
 if (! q .rem) {
   np = q .quot;
 ++ fp [d - 01]; }
-else s += (++ d << 01) - 01; }
+else s += (++ d << 01) - 01; } if (d == np) { ++ fp [d - 01]; n = 01; }
   return np;
 }
 int const main (int const, char const *const [])
