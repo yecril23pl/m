@@ -32,10 +32,15 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
+          t="$(mktemp)"
           echo 'Enumerate all integers from 1 to 10'
           : $((i = 0))
+          exec 3>"${t}"
           while expr $((i < 012))
-          do expr $((++ i))
+          do expr $((++ i)) >&3
           done
+          exec 3>&-
+          echo all: $(<"${t}")
+          rm "${t}"
           echo Add other actions to build,
           echo test, and deploy your project.
