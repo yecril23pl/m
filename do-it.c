@@ -3,7 +3,7 @@
 static int const factorise (int np,  char fp [])
 {
 char d = 02; short s = 04;
-for (; s < np;)
+for (; s <= np;)
 {
 div_t const q = div (np, d);
 if (! q .rem) {
