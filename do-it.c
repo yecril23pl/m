@@ -40,10 +40,21 @@ for (; (* n) ++ < N; )
     factorise (* n, l_f);
     for (; * f < N; ++ * f)
       {
-        char e = l_f [* f], x = *f;
+        char e = l_f [* f]
+        ; char const
+        f1 = * f + 01; char x = f1
         ;
-        for (; e --; ) { div_t const q = div (l_n [x], *f); if (! q .rem) l_n [x] = q .quot;
-          fprintf (stderr, " * %d %d", * f + 01, q .rem); }
+        for (; e --; ) { div_t
+                        q; for (; x < * n &&
+          (q
+                        = div (l_n [x],
+          f1
+          )) .rem; x += f1
+          )
+          ;
+          l_n [x] = q .quot;
+          fprintf (stderr, " * %d %d", f1
+            , q .rem); }
       }
     fputc ('\n', stderr);
   }
