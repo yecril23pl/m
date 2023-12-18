@@ -34,7 +34,9 @@ for (; (* n) ++ < N; )
     l_f [N] = {}, /* factor index */
     f [01] = {}, /* previous integers */
     l_n [N]
-    ; fill_id
+    ; div_t
+                        q;
+    fill_id
       (l_n, * n);
     fprintf (stderr, "(%d):", * n);
     factorise (* n, l_f);
@@ -44,8 +46,8 @@ for (; (* n) ++ < N; )
         ; char const
         f1 = * f + 01; char x = f1
         ;
-        for (; e --; ) { div_t
-                        q; if (x >= * n) q = div (01, f1); else
+        for (; e --; ) {
+                        if (x >= * n) q = div (01, f1); else
                         for (; x < * n &&
           (q
                         = div (l_n [x],
@@ -55,8 +57,8 @@ for (; (* n) ++ < N; )
           ;
           l_n [x] = q .quot;
           fprintf (stderr, " * %d %d", f1
-            , q .rem); if (! q .rem) ++ n [01];
-                       }
+            , q .rem);
+                       } if (! q .rem) ++ n [01];
       }
     fputc ('\n', stderr);
   } if (printf ("holds for %d/%d\n", n [01], N) > 0) return EXIT_SUCCESS;
