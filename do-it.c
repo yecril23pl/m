@@ -45,7 +45,8 @@ for (; (* n) ++ < N; )
         f1 = * f + 01; char x = f1
         ;
         for (; e --; ) { div_t
-                        q; for (; x < * n &&
+                        q; if (x >= * n) q = div (01, f1); else
+                        for (; x < * n &&
           (q
                         = div (l_n [x],
           f1
