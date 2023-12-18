@@ -23,7 +23,7 @@ n) { for (int x = 0; x < n; ++ x) l_n [x] = x; return n; }
 
 int const main (int const, char const *const [])
 {
-enum MaxTry { N = 023 }; char n [01] = {};
+enum MaxTry { N = 023 }; char n [02] = {};
 fprintf
   (stderr,
   "Counting numbers (n) up to (%d) that divide ((n 1 – +)!)…\n",
@@ -55,8 +55,9 @@ for (; (* n) ++ < N; )
           ;
           l_n [x] = q .quot;
           fprintf (stderr, " * %d %d", f1
-            , q .rem); }
+            , q .rem); if (! q .rem) ++ n [01];
+                       }
       }
     fputc ('\n', stderr);
-  }
+  } if (printf ("holds for %d/%d\n", n [01], N) > 0) return EXIT_SUCCESS;
   return EXIT_FAILURE; }
