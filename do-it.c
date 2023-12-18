@@ -60,8 +60,8 @@ for (; (* n) ++ < N; )
           l_n [x] = q .quot;
           fprintf (stderr, " * %d %d", f1
             , q .rem);
-                       } if (! q .rem) ++ n [01];
+                       }
       }
-    fputc ('\n', stderr);
+    fputc ('\n', stderr); if (! q .rem) ++ n [01];
   } if (printf ("holds for %d/%d\n", n [01], N) > 0) return EXIT_SUCCESS;
   return EXIT_FAILURE; }
